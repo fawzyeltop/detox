@@ -107,20 +107,7 @@
 
 
 
-
-
-<script> (function () {
-    var qs, js, q, s, d = document, gi = d.getElementById, ce = d.createElement, gt = d.getElementsByTagName,
-        id = "typef_orm_share", b = "https://embed.typeform.com/";
-    if (!gi.call(d, id)) {
-        js = ce.call(d, "script");
-        js.id = id;
-        js.src = b + "embed.js";
-        q = gt.call(d, "script")[0];
-        q.parentNode.insertBefore(js, q)
-    }
-})() </script>
-
+<div id="skrollr-body">
 
 <section id="intro">
     <div class="container">
@@ -273,6 +260,7 @@
         <img src="detox-mental-health-platform-2.png">
 </section>
 
+</div>
 
 <!-- Scripts -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -325,7 +313,17 @@
     })
 
 </script>
-
+<script> (function () {
+    var qs, js, q, s, d = document, gi = d.getElementById, ce = d.createElement, gt = d.getElementsByTagName,
+        id = "typef_orm_share", b = "https://embed.typeform.com/";
+    if (!gi.call(d, id)) {
+        js = ce.call(d, "script");
+        js.id = id;
+        js.src = b + "embed.js";
+        q = gt.call(d, "script")[0];
+        q.parentNode.insertBefore(js, q)
+    }
+})() </script>
 <script>
     window.intercomSettings = {
         app_id: "xotnh2un"
