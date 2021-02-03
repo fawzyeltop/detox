@@ -88,6 +88,8 @@
 
 #logo {
     position: fixed;
+    margin-left: -50% ;top:250px;
+    z-index: 900;
 }
 
 .marquee div {
