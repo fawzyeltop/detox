@@ -1,0 +1,460 @@
+@font-face {
+    font-family: 'Whyte Trial';
+    src: url('../fonts/WhyteTrial-Thin.eot');
+    src: url('../fonts/WhyteTrial-Thin.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/WhyteTrial-Thin.woff2') format('woff2'),
+    url('../fonts/WhyteTrial-Thin.woff') format('woff'),
+    url('../fonts/WhyteTrial-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Whyte Trial Book';
+    src: url('../fonts/WhyteTrial-Book.eot');
+    src: url('../fonts/WhyteTrial-Book.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/WhyteTrial-Book.woff2') format('woff2'),
+    url('../fonts/WhyteTrial-Book.woff') format('woff'),
+    url('../fonts/WhyteTrial-Book.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Swear Banner';
+    src: url('../fonts/SwearBanner-BoldItalic.eot');
+    src: url('../fonts/SwearBanner-BoldItalic.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/SwearBanner-BoldItalic.woff2') format('woff2'),
+    url('../fonts/SwearBanner-BoldItalic.woff') format('woff'),
+    url('../fonts/SwearBanner-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Swear Banner';
+    src: url('../fonts/SwearBanner-MediumItalic.eot');
+    src: url('../fonts/SwearBanner-MediumItalic.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/SwearBanner-MediumItalic.woff2') format('woff2'),
+    url('../fonts/SwearBanner-MediumItalic.woff') format('woff'),
+    url('../fonts/SwearBanner-MediumItalic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Swear Text';
+    src: url('../fonts/SwearText-Light.eot');
+    src: url('../fonts/SwearText-Light.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/SwearText-Light.woff2') format('woff2'),
+    url('../fonts/SwearText-Light.woff') format('woff'),
+    url('../fonts/SwearText-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Swear Text';
+    src: url('../fonts/SwearText-Regular.eot');
+    src: url('../fonts/SwearText-Regular.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/SwearText-Regular.woff2') format('woff2'),
+    url('../fonts/SwearText-Regular.woff') format('woff'),
+    url('../fonts/SwearText-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.high-performer-icon {
+    animation-name: spin;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.marquee div {
+    display: flex;
+    align-items: center;
+    width: max-content;
+
+    padding-left: 100%;
+    /* show the marquee just outside the paragraph */
+    will-change: transform;
+    animation: marquee 15s linear infinite;
+}
+
+.marquee h2 {
+    font-size: 200px;
+    padding: 0 45px;
+    text-transform: uppercase;
+}
+
+.marquee-font-2 {
+    font-family: 'Whyte Trial';
+    font-weight: 100;
+    font-style: normal;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(-100%, 0);
+    }
+}
+
+
+/* Respect user preferences about animations */
+
+@media (prefers-reduced-motion: reduce) {
+    .marquee span {
+        animation-iteration-count: 1;
+        animation-duration: 0.5;
+        /* instead of animation: none, so an animationend event is
+         * still available, if previously attached.
+         */
+        width: auto;
+        padding-left: 0;
+    }
+}
+
+body,
+html {
+    background-color: #2F0D35;
+    background-image: url('background-pattern.jpg');
+}
+
+body {
+    overflow: hidden;
+}
+
+body,
+html,
+.navbar-light .navbar-nav .nav-link {
+    color: #ffffff;
+}
+
+nav .typeform-share {
+    flex-basis: 140px;
+}
+
+hr {
+    background: #720086;
+    color: #720086;
+    border-color: #720086;
+    height: 2px;
+}
+
+a,
+p {
+    font-family: 'Whyte Trial Book';
+    font-weight: normal;
+    font-style: normal;
+}
+
+a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+a:hover,
+.navbar-light .navbar-nav .nav-link:focus,
+.navbar-light .navbar-nav .nav-link:hover {
+    color: rgba(255, 255, 255, 0.5);
+    text-decoration: underline;
+}
+
+
+p {
+    font-size: 24px;
+    letter-spacing: -1px;
+    line-height: 150%;
+}
+
+p.large {
+    font-size: 36px;
+}
+
+.navbar-light .navbar-toggler {
+    color: transparent;
+    border-color: transparent;
+}
+
+.detox-btn {
+    background-color: #FEFFBE;
+    color: #0B0B0B;
+    font-size: 42px;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    line-height: 42px;
+    position: absolute;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    transition: all 250ms ease-in;
+    z-index: 1;
+}
+
+.detox-btn:hover {
+    background-color: #0B0B0B;
+    color: #FEFFBE;
+    text-decoration: none;
+    transition: all 250ms ease-out;
+}
+
+#sPreloaderScreen .detox-btn {
+    bottom: -100px;
+    right: 0;
+}
+
+#exit-cta .detox-btn {
+    top: -100px;
+    right: 100px;
+}
+
+h2,
+.detox-btn {
+    font-family: 'Swear Banner';
+    font-weight: 500;
+    font-style: italic;
+}
+
+h3 {
+    font-family: 'Swear Text';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 48px;
+    letter-spacing: -3px;
+    line-height: 125%;
+    padding: 120px 0;
+}
+
+img {
+    width: 100%
+}
+
+#intro {
+    margin-top: 900px;
+}
+
+.sPreloaderScreen-content,
+section {
+    position: relative;
+    z-index: 1;
+}
+
+#intro img {
+    width: 1000px;
+    position: absolute;
+    top: -200px;
+    right: 0;
+    z-index: -999;
+}
+
+#intro p {
+    padding: 0 0 90px 45px;
+}
+
+#who .large,
+.who-inner-container {
+    padding: 90px 0;
+}
+
+.who-inner-container .row:nth-child(2) {
+    padding-top: 45px;
+}
+
+#marquee {
+    padding-top: 90px;
+}
+
+#exit-cta {
+    padding: 120px 0;
+    overflow: hidden;
+    text-align: center;
+}
+
+#exit-cta .container {
+    z-index: 1;
+    position: relative;
+}
+
+#exit-cta a:hover {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+#exit-cta h4 {
+    font-family: 'Swear Text';
+    font-size: 144px;
+    font-weight: 300;
+    line-height: 125%;
+    text-transform: uppercase;
+}
+
+#exit-cta h4 span {
+    font-family: 'Swear Banner';
+    font-size: 288px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+#exit-cta img {
+    width: 1000px;
+    position: absolute;
+    bottom: -500px;
+    left: -500px;
+    z-index: -99;
+}
+
+/* Preloader Screen */
+.preloaderScreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 100000;
+    height: 100%;
+    width: 100%;
+    background-image: url('background-pattern.jpg');
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wellness-platform h3 {
+    padding: 0;
+    letter-spacing: normal;
+    font-size: 108px;
+    line-height: 100%;
+    position: relative;
+}
+
+.wellness-platform img {
+    position: absolute;
+    right: 0;
+    bottom: -325px;
+    width: 1000px;
+}
+
+.item {
+    align-items: center;
+    height: 300px;
+}
+
+.item img {
+    height: 100%;
+}
+
+#logo {
+    margin: 0 auto;
+}
+
+.navbar-light .navbar-toggler-icon {
+    background-image: url("menu.svg");
+}
+
+@media screen and (max-width: 767px) {
+
+    .navbar {
+        background-color: rgb(40 0 45 / 93%);
+    }
+
+    .svg-logo {
+        z-index: 10000;
+        position: relative;
+    }
+
+    nav li.nav-item {
+        padding: 5px 12px;
+    }
+
+    p {
+        font-size: 20px;
+    }
+
+    #intro {
+        margin-top: 650px;
+    }
+
+    #intro p {
+        padding: 0 30px 90px;
+    }
+
+    #sPreloaderScreen .container {
+        margin-top: -150px;
+    }
+
+    nav .typeform-share {
+        display: none;
+    }
+
+    nav .d-block .typeform-share {
+        display: block;
+    }
+
+    .wellness-platform h3 {
+        font-size: 72px;
+    }
+
+    #sPreloaderScreen .detox-btn {
+        bottom: -200px;
+    }
+
+    .detox-feature {
+        margin-bottom: 20px;
+    }
+
+    h3 {
+        font-size: 32px;
+        letter-spacing: -1px;
+    }
+
+    .who-inner-container .row:nth-child(2) {
+        padding-top: 0;
+    }
+
+    .marquee h2 {
+        font-size: 120px;
+    }
+
+    p.large {
+        font-size: 28px;
+    }
+
+    #exit-cta h4 {
+        font-size: 72px;
+    }
+
+    #exit-cta h4 span {
+        font-size: 144px;
+    }
+
+    #exit-cta .detox-btn {
+        top: auto;
+        right: 0;
+        bottom: -150px;
+        left: 0;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
