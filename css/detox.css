@@ -86,6 +86,9 @@
     animation-timing-function: linear;
 }
 
+#logo {
+    position: fixed;
+}
 
 .marquee div {
     display: flex;
