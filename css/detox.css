@@ -86,9 +86,6 @@
     animation-timing-function: linear;
 }
 
-#logo {
-    width: 100%; left:50vw;margin-left: -50% ;top:300px;position:fixed; z-index: 998
-}
 
 .marquee div {
     display: flex;
