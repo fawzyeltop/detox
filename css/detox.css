@@ -375,15 +375,6 @@ section {
 
 @media screen and (max-width: 767px) {
 
-    .navbar {
-        background-color: rgb(40 0 45 / 93%);
-    }
-
-    .svg-logo {
-        z-index: 10000;
-        position: relative;
-    }
-
     nav li.nav-item {
         padding: 5px 12px;
     }
