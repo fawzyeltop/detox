@@ -72,7 +72,7 @@
 </div>
 <!-- Second Preloader Screen -->
 
-<nav class="navbar fixed-top navbar-expand-lg navbar-light">
+<nav class="navbar sticky-top navbar-expand-lg navbar-light">
     <div class="container-fluid">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample06"
                 aria-controls="navbarsExample06" aria-expanded="false" aria-label="Toggle navigation">
@@ -92,19 +92,37 @@
     </div>
 </nav>
 
-
-<div id="logo" data-0="width: 100%; left:50vw;margin-left: -50% ;top:200px;position:fixed; z-index: 900"
-data-150="width: 60%; left:50vw;margin-left:-30%;top:10px;"
-data-500="width: 40%; left:50vw;margin-left:-20%;top:10px;"
-data-501="width:220px;left:50vw;margin-left:-110px;top:10px;"
-data-600="width:200px;left:50vw;margin-left:-100px;top:10px;" data-top="position:fixed;">
+<!-- For Logo -->
+<div class="d-none d-xl-block constantLogo" 
+    data-0="width: 1180px; left:50vw;margin-left: -590px ;top:200px;position:fixed; z-index: 900; text-align: center"
+    data-300="width: 220px; left:50vw;margin-left:-110px;top:10px;" data-top="position:fixed;">
+    <img class="center-block img-responsive" src="svgImage.svg">
+</div>
+<div class="d-none d-lg-block d-xl-none constantLogo" 
+data-0="width: 992px; left:50vw;margin-left: -496px ;top:200px;position:fixed; z-index: 900; text-align: center"
+data-300="width: 220px; left:50vw;margin-left:-110px;top:10px;" data-top="position:fixed;">
 <img class="center-block img-responsive" src="svgImage.svg">
 </div>
+<div class="d-none d-md-block d-lg-none constantLogo" 
+data-0="width: 768px; left:50vw;margin-left: -384px ;top:200px;position:fixed; z-index: 900; text-align: center"
+data-300="width: 220px; left:50vw;margin-left:-110px;top:10px;" data-top="position:fixed;">
+<img class="center-block img-responsive" src="svgImage.svg">
+</div>
+<div class="d-none d-sm-block d-md-none constantLogo" 
+data-0="width: 576px; left:50vw;margin-left: -286px ;top:200px;position:fixed; z-index: 900; text-align: center"
+data-300="width: 220px; left:50vw;margin-left:-110px;top:10px;" data-top="position:fixed;">
+<img class="center-block img-responsive" src="svgImage.svg">
+</div>
+<div class="d-block d-sm-none constantLogo" 
+data-0="width: 100%; left:50vw;margin-left: -50% ;top:200px;position:fixed; z-index: 900; text-align: center"
+data-300="width: 80%; left:50vw;margin-left:-40%;top:10px;" data-top="position:fixed;">
+<img class="center-block img-responsive" src="svgImage.svg">
+</div>
+<!-- For Logo -->
 
 
 
-
-<div id="skrollr-body" style="position: relative; z-index: 1">
+<div id="skrollr-body">
    
 <section id="intro">
     <div class="container">
@@ -360,6 +378,17 @@ data-600="width:200px;left:50vw;margin-left:-100px;top:10px;" data-top="position
             }
         }
     })();
+</script>
+<script>
+    $(() => {
+        $('.nav-link').on('click', (e) => {
+            e.preventDefault();
+            var $anchor = $(event.target);
+            $('html, body').animate({
+                scrollTop: $($anchor.attr('href')).offset().top + "px"
+            }, 100);
+        });
+    })
 </script>
 </body>
 
